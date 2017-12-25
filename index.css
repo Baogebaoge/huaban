@@ -1,0 +1,87 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+}
+.top{
+	width: 1500px;
+	padding: 10px 100px;
+	margin: 0 auto;
+	box-shadow: 5px 5px 5px #ccc;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: flex-start;
+}
+.option,.shape,.style{
+	width: 100%;
+	height: 100px;
+	border-right: 1px solid #ccc;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px 0px 0 10px;
+}
+.top li{
+	width:70px;
+    height:35px;
+    border-radius: 12px;
+    margin-right: 10px;
+    border: 1px solid #999;
+    line-height: 35px;
+    text-align: center;
+    font-weight: bold;
+}
+.hot{
+	border: 2px solid  #2285f4!important;
+	background: #fff;
+	font-weight: 600;
+	color: #ff6700;
+}
+.con{
+	box-sizing: border-box;
+	position: relative;
+	margin:50px 100px  0;
+}
+.mask{
+	width: 1202px;
+	height: 502px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 999;
+}
+canvas{
+	border: 1px solid green;
+	background: #fff;
+}
+.iconfont{
+	padding-right: 8px;
+	color: #999;
+}
+.number{
+	width: 50px;
+}
+.eraser1{
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	top: 50px;
+	left: 100px;
+	background:rgba(0,0,0,0.3);
+	display: none;
+}
+#clip{
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border: 1px dashed green;
+	display: none;
+}
+/* 封装draw,铅笔不合并,draw里传参,调用内部方法,多边形和多角形需要两个参数 */
+/* 在canvas移动和mask一样,传参mask,把canvas改为mask */

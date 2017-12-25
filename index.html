@@ -1,41 +1,51 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Palette</title>
-    <link rel="stylesheet" href="css/index.css">
-    <script src="js/palettee.js"></script>
-    <script src="js/index.js"></script>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://at.alicdn.com/t/font_517261_rxa31vvliocd6lxr.css">
+	<link rel="stylesheet" href="index.css">
+	<script src="function.js"></script>
 </head>
 <body>
-    <header>
-        <ul class="save">
-            <li>新建</li>
-            <li>保存</li>
-            <li>编辑</li>
-            <li>退出</li>
+	<!-- option选项 保存 撤销 退出 新建   
+	shape图形 直线 虚线  铅笔 圆形 矩形 多边形 多角形   
+	style样式/属性	 填充 填充样式 描边样式 --> 
+<!-- 	height:calc(100% - 100px) -->
+	<div class="top">
+		<ul class="option">
+			<li><a href="" class="save">保存</a></li>
+			<li id="che">撤销</li>
+			<li>退出</li>
+			<li class="open">新建</li>
+		</ul>
+		<ul class="shape">
+			<li id="line">直线</li>
+			<li id="dash">虚线</li>
+			<li id="pencil">铅笔</li>
+			<li id="radius">圆形</li>
+			<li id="rect">矩形</li>			
+			<li id="polygon">多边形</li>
+			<li id="horn">多角形</li>	
+			<li id="eraser">橡皮</li>
+			<li id="font">文字</li>
+            <li id="clips">裁剪</li>
+		</ul>
+		<ul class="style">
+            <li class="stroke" id="stroke">描边</li>
+            <li><input type="color" id="strokeStyle"></li>
+            <li class="fill" id="fill">填充</li>
+            <li><input type="color" id="fillStyle"></li>
+            <li class="number" id="number">线宽</li>
+            <li><input type="number" style="width: 50px" id="lwStyle"></li>
         </ul>
-        <ul class="shape">
-            <li id="line">直线</li>
-            <li id="circle">圆</li>
-            <li id="pencil">铅笔</li>
-            <li id="dash">虚线</li>
-            <li id="rect">矩形</li>
-            <li id="poly">多边形</li>
-            <li id="polyj">多角形</li>
-            <li id="eraser">橡皮擦</li>
-        </ul>
-        <ul class="color">
-            <li class="stroke">描边</li>
-            <li><input type="color"></li>
-            <li class="fill">填充</li>
-            <li><input type="color"></li>
-        </ul>
-    </header>
-    <section>
-        <canvas width="1400" height="600">
-
-        </canvas>
-    </section>
+	</div>
+	<div class="con">
+		<div class="mask"></div>
+		<div class="eraser1"></div>
+		<div id="clip"></div>
+	</div>
 </body>
 </html>
+<script src="palette.js"></script>
+<script src="index.js"></script>
